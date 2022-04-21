@@ -1,0 +1,488 @@
+@charset "UTF-8";
+/* Add your custom CSS declarations below  */
+
+@font-face {
+    font-family: "galyon-bold-italic";
+    src: url("../font/galyon-bold-italic-webfont.woff");
+}
+
+@font-face {
+    font-family: "galyon-bold";
+    src: url("../font/galyon-bold-webfont.woff");
+}
+
+@font-face {
+    font-family: "galyon-book-italic";
+    src: url("../font/galyon-book-italic-webfont.woff");
+}
+
+@font-face {
+    font-family: "galyon-book";
+    src: url("../font/galyon-book-webfont.woff");
+}
+
+.nav{
+    padding: 0px;
+    font-family: galyon-book;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #f5f7f9;
+    background-color: #222529;
+    font-family: galyon-book;
+}
+
+a {
+    color: #222529;
+    font-family: galyon-book;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: #222529;
+    text-decoration: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ff2a00;
+}
+
+a:hover {
+    color: #ff2a00;
+    font-family: galyon-book;
+}
+
+/* HAMBURGER MENU STYLES */
+#menu__toggle {
+display:none;
+}
+
+#menu__toggle:checked + .menu__btn > span {
+transform: rotate(45deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::before {
+top: 0;
+transform: rotate(0deg);
+}
+
+#menu__toggle:checked + .menu__btn > span::after {
+top: 0;
+transform: rotate(90deg);
+}
+
+#menu__toggle:checked ~ .menu__box {
+right: 0 !important;
+}
+
+.menu__btn {
+position: fixed;
+top: 26px;
+right: 20px;
+width: 26px;
+height: 26px;
+cursor: pointer;
+z-index: 1;
+transition: all .5s ease-in-out;
+}
+
+.menu__btn > span, .menu__btn > span::before, .menu__btn > span::after {
+display: block;
+position: absolute;
+width: 100%;
+height: 2px;
+background-color: #222529;
+transition-duration: .25s;
+}
+
+.menu__btn > span::before {
+content: '';
+position:absolute;
+transition: all .5s ease-in-out;   
+top: -8px;
+}
+
+.menu__btn > span::after {
+content: '';
+position:absolute;
+transition: all .5s ease-in-out;   
+top: 8px;
+}
+
+.menu__box {
+display: block;
+position: fixed;
+top: 40px;
+right: -100%;
+height: auto;
+padding:15px;
+z-index: 1;
+background-color: rgba(245, 247, 249, 0.9);
+box-shadow: -2px 2px 9px rgba(0, 0, 0, .3);
+}
+
+.menu__item {
+display: block;
+position:absolute;
+padding: 9px 44px 9px 0;
+}
+
+.menu__item:hover {
+background-color: rgba(255, 42, 0, 0.3);
+}
+
+/* HAMBURGER GOES AWAY AT 900PX */
+@media only screen and (min-width:900px) {
+.header-left {
+grid-column:1/13;
+}
+.header-right {
+grid-column:1/13;
+}
+.hide {
+display:none;
+}
+.menu__toggle {
+display:inline;
+}
+.menu__btn {
+display:none;
+}
+.menu__box {
+display:flex;
+flex-direction:row;
+justify-content:space-around;
+position: initial;
+padding:10px;
+background-color: #fff;
+box-shadow: none;
+}
+.menu__item {
+color:white;
+display: block;
+padding: 0 0;
+color: #222529;
+text-decoration: none;
+}
+}
+
+.carousel { 
+    width: 100%;
+    height: 100%;
+    padding-top: 0px;
+    padding-bottom: 30px;
+
+}
+
+.carousel-caption {
+    text-align: center;
+    padding-bottom: 530px!important;
+}
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+body {
+    font-family: galyon-book;
+}
+
+.bold {
+    font-family: galyon-bold;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: galyon-bold;
+}
+
+.btn-primary {
+    color: #f5f7f9;
+    background-color: #222529;
+    border-color: #222529;
+}
+
+.btn-secondary {
+    color: #f5f7f9;
+    background-color: #222529;
+    border-color: #222529;
+    font-family: galyon-book;
+}
+
+.btn-secondary:hover {
+    color: #f5f7f9;
+    background-color: #222529;
+    border-color: #222529;
+    font-family: galyon-book;
+}
+
+.btn:hover {
+    color: #f5f7f9;
+    background-color: #ff0000;
+    border-color:  #ff0000;
+    font-family: galyon-book;
+}
+
+.jumbotron-fluid {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.3) 100%),url('../images/pexels-yaroslav-shuraev-7645615.jpg');
+    background-size: cover;
+    background-position: bottom center;
+    height: 100vh;
+}
+
+.btn-primary {
+    color:#f5f7f9;
+    background-color: #222529;
+    border-color: #222529;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: #fff;
+    padding-top: 500px;
+}
+.img-fluid{
+    padding: 10px;
+}
+
+.offers {
+    padding: 0px;
+    border: 5px solid #222529;
+}
+
+.hvrbox,
+.hvrbox * {
+	box-sizing: border-box;
+}
+.hvrbox {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+.hvrbox img {
+	max-width: 100%;
+}
+.hvrbox .hvrbox-layer_bottom {
+	display: block;
+}
+.hvrbox .hvrbox-layer_top {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(245,247, 249, 0.9);
+    color: #222529;
+	padding: 15px;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+	opacity: 1;
+}
+.hvrbox .hvrbox-text {
+	text-align: left !important;
+	font-size: 16px !important;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.hvrbox .hvrbox-text_mobile {
+	font-size: 15px;
+	border-top: 1px solid rgb(245, 247, 249); /* for old browsers */
+	border-top: 1px solid rgba(245, 247, 249, 0.9);
+	margin-top: 5px;
+	padding-top: 2px;
+	display: none;
+}
+.hvrbox.active .hvrbox-text_mobile {
+	display: block;
+}
+.hvrbox,
+.hvrbox * {
+	box-sizing: border-box;
+}
+.hvrbox {
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	max-width: 100%;
+	height: auto;
+}
+.hvrbox img {
+	max-width: 100%;
+}
+.hvrbox .hvrbox-layer_bottom {
+	display: block;
+}
+.hvrbox .hvrbox-layer_top {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(245,247, 249, 0.9);
+    color: #222529;
+	padding: 15px;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-ms-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+	opacity: 1;
+}
+.hvrbox .hvrbox-text {
+	text-align: left !important;
+	font-size: 17px !important;
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-moz-transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.hvrbox .hvrbox-text_mobile {
+	font-size: 15px;
+	border-top: 1px solid rgb(245, 247, 249); /* for old browsers */
+	border-top: 1px solid rgba(245, 247, 249, 0.9);
+	margin-top: 5px;
+	padding-top: 2px;
+	display: none;
+}
+.hvrbox.active .hvrbox-text_mobile {
+	display: block;
+}
+
+.logo {
+    padding-top: 15px;
+}
+
+h3 {
+    padding: 5px;
+}
+
+
+.carousel-dark .carousel-caption {
+    color: #000;
+}
+.carousel-caption {
+    position: absolute;
+    right: 15%;
+    bottom: 1.25rem;
+    left: 15%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    color: #fff;
+    text-align: center;
+    display: block;
+}
+
+.footer{
+    color: #f5f7f9;
+    background-color: #222529;
+    padding: 15px;
+}
+
+small{
+    font-family: galyon-book;
+}
+
+.socials{
+    padding-top: 50px;
+    padding-bottom: 15px;
+    
+}
+
+.tagline {
+    padding-top:40px;
+}
+
+.bio{
+    padding:20px;
+    border-radius: 15px 50px;
+    background: #f5f7f9;
+    text-align: left;  
+    
+}
+.bio2 {
+    padding:20px;
+    border-radius: 15px 50px; 
+    background: #f5f7f9;
+    text-align: left;
+}
+
+.headshots {
+    background: #f5f7f9;
+    border-radius: 15px;
+    
+}
+.name {
+    padding:15px;
+}
+
+h1 {
+    padding:20px;
+}
+
+.video {
+    padding-top:20px;
+}
+
+.iphone {
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+}
+.cover {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.1) 100%),url('../images/about.jpg');
+    background-size: cover;
+    background-position:center center;
+    height: 100vh;
+}
+h2 {
+    padding-top:20px;
+}
+.cover2{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.2) 100%),url('../images/pexels-yaroslav-shuraev-7645609 (1).jpg');
+    background-size: cover;
+    background-position:center;
+    height: 100vh;
+}
+.movement {
+    background: #f5f7f9;    
+}
+
+.cover3 {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.1) 100%),url('../images/LP13.jpg');
+    background-size: cover;
+    background-position:top center;
+    height: 100vh;
+}
