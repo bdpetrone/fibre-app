@@ -230,11 +230,31 @@ h1, h2, h3, h4, h5 {
     font-family: galyon-book;
 }
 
+.btn-check:focus+.btn-primary, .btn-primary:focus {
+    color:  #f5f7f9;
+    background-color:#ff0000;
+    border-color: #ff0000;
+    box-shadow: 0 0 0 0.25rem rgb(255 0 0 / 50%);
+}
+
+.btn-check:active+.btn-primary, .btn-check:checked+.btn-primary, .btn-primary.active, .btn-primary:active, .show>.btn-primary.dropdown-toggle {
+    color:  #f5f7f9;
+    background-color: #ff0000;
+    border-color:#ff0000;
+}
+
 .jumbotron-fluid {
     background-image: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.3) 100%),url('../images/pexels-yaroslav-shuraev-7645615.jpg');
     background-size: cover;
     background-position: bottom center;
     height: 100vh;
+}
+
+btn-primary:focus {
+    color: #f5f7f9;
+    background-color: #222529;
+    border-color: #222529;
+    box-shadow: none;
 }
 
 .btn-primary {
@@ -307,6 +327,7 @@ h1, h2, h3, h4, h5 {
 	-webkit-transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
+    max-width: 100%;
 }
 .hvrbox .hvrbox-text_mobile {
 	font-size: 15px;
@@ -438,12 +459,7 @@ small{
     background: #f5f7f9;
     text-align: left;
 }
-
-.headshots {
-    background: #f5f7f9;
-    border-radius: 15px;
-    
-}
+s
 .name {
     padding:15px;
 }
